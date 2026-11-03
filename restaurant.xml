@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='utf-8'?>
+<restaurant name="Ресторан «Лаборатория вкуса»">
+  <categories>
+    <category>
+      <id>1</id>
+      <name>Салаты</name>
+      <description>Холодные закуски</description>
+    </category>
+    <category>
+      <id>2</id>
+      <name>Горячее</name>
+      <description>Основные блюда</description>
+    </category>
+  </categories>
+  <menus>
+    <menu>
+      <id>1</id>
+      <name>Основное меню</name>
+      <description>Постоянное меню ресторана</description>
+    </menu>
+  </menus>
+  <halls>
+    <hall>
+      <id>1</id>
+      <name>Основной зал</name>
+      <location>1 этаж</location>
+    </hall>
+    <hall>
+      <id>2</id>
+      <name>Летняя веранда</name>
+      <location>Терраса</location>
+    </hall>
+  </halls>
+  <tables>
+    <table>
+      <id>1</id>
+      <hall_id>1</hall_id>
+      <number>1</number>
+      <seats>4</seats>
+    </table>
+    <table>
+      <id>2</id>
+      <hall_id>1</hall_id>
+      <number>2</number>
+      <seats>2</seats>
+    </table>
+    <table>
+      <id>3</id>
+      <hall_id>2</hall_id>
+      <number>1</number>
+      <seats>6</seats>
+    </table>
+  </tables>
+  <customers>
+    <customer>
+      <id>1</id>
+      <full_name>Монин Арсений Артемович</full_name>
+      <phone>+7-900-111-22-33</phone>
+      <loyalty_card>CARD-001</loyalty_card>
+    </customer>
+    <customer>
+      <id>2</id>
+      <full_name>Спиридонов Артем Федотович</full_name>
+      <phone>+7-900-222-33-44</phone>
+      <loyalty_card />
+    </customer>
+  </customers>
+  <waiters>
+    <waiter>
+      <id>1</id>
+      <full_name>Тарасов Арсений Валентинович</full_name>
+      <hall_id>1</hall_id>
+      <position>Старший официант</position>
+    </waiter>
+    <waiter>
+      <id>2</id>
+      <full_name>Малуси  Ндаба Эниинная</full_name>
+      <hall_id>2</hall_id>
+      <position>Официант</position>
+    </waiter>
+  </waiters>
+  <shifts>
+    <shift>
+      <id>1</id>
+      <waiter_id>1</waiter_id>
+      <weekdays>Пн–Пт</weekdays>
+      <start_time>10:00</start_time>
+      <end_time>18:00</end_time>
+    </shift>
+    <shift>
+      <id>2</id>
+      <waiter_id>2</waiter_id>
+      <weekdays>Сб–Вс</weekdays>
+      <start_time>12:00</start_time>
+      <end_time>22:00</end_time>
+    </shift>
+  </shifts>
+  <products>
+    <product>
+      <id>1</id>
+      <name>Говядина</name>
+      <unit>кг</unit>
+      <stock>25.0</stock>
+    </product>
+    <product>
+      <id>2</id>
+      <name>Картофель</name>
+      <unit>кг</unit>
+      <stock>40.0</stock>
+    </product>
+    <product>
+      <id>3</id>
+      <name>Томаты</name>
+      <unit>кг</unit>
+      <stock>15.0</stock>
+    </product>
+  </products>
+  <dishes>
+    <dish>
+      <id>1</id>
+      <name>Стейк с картофелем</name>
+      <price>1500.0</price>
+      <menu_id>1</menu_id>
+      <category_id>2</category_id>
+      <description>Говяжий стейк на гриле</description>
+    </dish>
+    <dish>
+      <id>2</id>
+      <name>Салат с томатами</name>
+      <price>450.0</price>
+      <menu_id>1</menu_id>
+      <category_id>1</category_id>
+      <description />
+    </dish>
+  </dishes>
+  <ingredients>
+    <ingredient>
+      <id>1</id>
+      <dish_id>1</dish_id>
+      <product_id>1</product_id>
+      <amount>0.25</amount>
+    </ingredient>
+    <ingredient>
+      <id>2</id>
+      <dish_id>1</dish_id>
+      <product_id>2</product_id>
+      <amount>0.2</amount>
+    </ingredient>
+    <ingredient>
+      <id>3</id>
+      <dish_id>2</dish_id>
+      <product_id>3</product_id>
+      <amount>0.15</amount>
+    </ingredient>
+  </ingredients>
+  <reservations>
+    <reservation>
+      <id>1</id>
+      <customer_id>1</customer_id>
+      <table_id>1</table_id>
+      <start_at>2026-11-02 19:00</start_at>
+      <guests>3</guests>
+      <status>Запланирована</status>
+    </reservation>
+    <reservation>
+      <id>2</id>
+      <customer_id>2</customer_id>
+      <table_id>3</table_id>
+      <start_at>2026-11-02 20:00</start_at>
+      <guests>5</guests>
+      <status>Запланирована</status>
+    </reservation>
+  </reservations>
+  <orders>
+    <order>
+      <id>1</id>
+      <reservation_id>1</reservation_id>
+      <waiter_id>1</waiter_id>
+      <created_at>2026-11-02 19:10</created_at>
+      <status>Открыт</status>
+    </order>
+  </orders>
+  <order_items>
+    <order_item>
+      <id>1</id>
+      <order_id>1</order_id>
+      <dish_id>1</dish_id>
+      <quantity>2</quantity>
+    </order_item>
+    <order_item>
+      <id>2</id>
+      <order_id>1</order_id>
+      <dish_id>2</dish_id>
+      <quantity>1</quantity>
+    </order_item>
+  </order_items>
+</restaurant>

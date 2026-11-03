@@ -1,0 +1,197 @@
+{
+  "restaurant": "Ресторан «Лаборатория вкуса»",
+  "categories": [
+    {
+      "id": 1,
+      "name": "Салаты",
+      "description": "Холодные закуски"
+    },
+    {
+      "id": 2,
+      "name": "Горячее",
+      "description": "Основные блюда"
+    }
+  ],
+  "menus": [
+    {
+      "id": 1,
+      "name": "Основное меню",
+      "description": "Постоянное меню ресторана"
+    }
+  ],
+  "halls": [
+    {
+      "id": 1,
+      "name": "Основной зал",
+      "location": "1 этаж"
+    },
+    {
+      "id": 2,
+      "name": "Летняя веранда",
+      "location": "Терраса"
+    }
+  ],
+  "tables": [
+    {
+      "id": 1,
+      "hall_id": 1,
+      "number": 1,
+      "seats": 4
+    },
+    {
+      "id": 2,
+      "hall_id": 1,
+      "number": 2,
+      "seats": 2
+    },
+    {
+      "id": 3,
+      "hall_id": 2,
+      "number": 1,
+      "seats": 6
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "full_name": "Монин Арсений Артемович",
+      "phone": "+7-900-111-22-33",
+      "loyalty_card": "CARD-001"
+    },
+    {
+      "id": 2,
+      "full_name": "Спиридонов Артем Федотович",
+      "phone": "+7-900-222-33-44",
+      "loyalty_card": ""
+    }
+  ],
+  "waiters": [
+    {
+      "id": 1,
+      "full_name": "Тарасов Арсений Валентинович",
+      "hall_id": 1,
+      "position": "Старший официант"
+    },
+    {
+      "id": 2,
+      "full_name": "Малуси  Ндаба Эниинная",
+      "hall_id": 2,
+      "position": "Официант"
+    }
+  ],
+  "shifts": [
+    {
+      "id": 1,
+      "waiter_id": 1,
+      "weekdays": "Пн–Пт",
+      "start_time": "10:00",
+      "end_time": "18:00"
+    },
+    {
+      "id": 2,
+      "waiter_id": 2,
+      "weekdays": "Сб–Вс",
+      "start_time": "12:00",
+      "end_time": "22:00"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Говядина",
+      "unit": "кг",
+      "stock": 25.0
+    },
+    {
+      "id": 2,
+      "name": "Картофель",
+      "unit": "кг",
+      "stock": 40.0
+    },
+    {
+      "id": 3,
+      "name": "Томаты",
+      "unit": "кг",
+      "stock": 15.0
+    }
+  ],
+  "dishes": [
+    {
+      "id": 1,
+      "name": "Стейк с картофелем",
+      "price": 1500.0,
+      "menu_id": 1,
+      "category_id": 2,
+      "description": "Говяжий стейк на гриле"
+    },
+    {
+      "id": 2,
+      "name": "Салат с томатами",
+      "price": 450.0,
+      "menu_id": 1,
+      "category_id": 1,
+      "description": ""
+    }
+  ],
+  "ingredients": [
+    {
+      "id": 1,
+      "dish_id": 1,
+      "product_id": 1,
+      "amount": 0.25
+    },
+    {
+      "id": 2,
+      "dish_id": 1,
+      "product_id": 2,
+      "amount": 0.2
+    },
+    {
+      "id": 3,
+      "dish_id": 2,
+      "product_id": 3,
+      "amount": 0.15
+    }
+  ],
+  "reservations": [
+    {
+      "id": 1,
+      "customer_id": 1,
+      "table_id": 1,
+      "start_at": "2026-11-02 19:00",
+      "guests": 3,
+      "status": "Запланирована"
+    },
+    {
+      "id": 2,
+      "customer_id": 2,
+      "table_id": 3,
+      "start_at": "2026-11-02 20:00",
+      "guests": 5,
+      "status": "Запланирована"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "reservation_id": 1,
+      "waiter_id": 1,
+      "created_at": "2026-11-02 19:10",
+      "status": "Открыт"
+    }
+  ],
+  "order_items": [
+    {
+      "id": 1,
+      "order_id": 1,
+      "dish_id": 1,
+      "quantity": 2
+    },
+    {
+      "id": 2,
+      "order_id": 1,
+      "dish_id": 2,
+      "quantity": 1
+    }
+  ]
+}
